@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+// import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
+import Header from "./components/Header";
+import Homepage from "./components/Homepage";
+import Currentrates from "./components/Currentrates";
+import CoinPage from './components/CoinPage';
+import Footer from './components/Footer';
+import SignIn from './components/SignIn';
+import Register from './components/Register';
+// import 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Route path='/' exact component={Homepage} />
+        <Route path='/currentrates' exact component={Currentrates} />
+        <Route path='/currentrates/coins/:id' exact component={CoinPage} />
+        <Route path='/signin' exact component={SignIn} />
+        <Route path='/register' exact component={Register} />
+      
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
