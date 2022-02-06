@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import CryptoContext from './CryptoContext';
+import { AuthProvider } from './AuthContext';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CryptoContext>
-      <App />
-    </CryptoContext>
+    <AuthProvider>
+      {/* <CryptoContext> */}
+        <App />
+      {/* </CryptoContext> */}
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

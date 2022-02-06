@@ -1,11 +1,20 @@
 import React from 'react';
 import banner from "../assets/banner.png";
 import featureBanner from '../assets/featurebanner.png';
+import { useAuth } from "../AuthContext"
+import { useHistory } from "react-router-dom";
+
 
 const Homepage = () => {
   
+  const { currentUser } = useAuth();
+  const history = useHistory();
+
+ 
   return (
     <div>
+      {currentUser ? history.push(`/dashboard`) :
+        (<div>
         <div className="container justify-content-start" style={{marginTop: '200px'}}>
           <div className="getStarted">
             <div className="row align-items-center">
@@ -63,7 +72,8 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>)}
+    </div>
   );
 };
 

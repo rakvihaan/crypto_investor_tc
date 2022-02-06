@@ -76,6 +76,31 @@ body {
 	border:1.5px solid #ddd8b8!important;
 }
 
+.dropdown-item {
+	font-family: Roboto, sans-serif;
+	font-size:.9em;
+}
+/* 
+.dropdown-menu.show {
+	margin-right: 30px!important;
+	background-color: #000;
+} */
+
+.profileDropdown.btn-secondary {
+	border: 1.5px solid #ddd8b8;
+	background-color: transparent;
+	color: #ddd8b8;
+}
+.profileDropdown:focus.btn-secondary:focus {
+	border: 1.5px solid #ddd8b8;
+	background-color: transparent;
+	color: #ddd8b8;
+}
+
+
+
+/* end of navbar */
+
 .banner-pic img {
 	width:40vh;
 	border-radius: 30px;
